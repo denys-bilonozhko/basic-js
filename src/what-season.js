@@ -9,19 +9,22 @@ module.exports = function getSeason(date) {
 
   let month = date.getMonth();
 
-  if (month == 0 || month == 1 || month == 11) {
-    return 'winter';
-  }
-
-  if (month == 2 || month == 3 || month == 4) {
-    return 'spring';
-  }
-
-  if (month == 5 || month == 6 || month == 7) {
-    return 'summer';
-  }
-
-  if (month == 8 || month == 9 || month == 10) {
-    return 'autumn';
+  switch (month) {
+    case 0:
+    case 1:
+    case 11:
+      return 'winter';
+    case 2:
+    case 3:
+    case 4:
+      return 'spring';
+    case 5:
+    case 6:
+    case 7:
+      return 'summer';
+    case 8:
+    case 9:
+    case 10:
+      return 'autumn';
   }
 };
